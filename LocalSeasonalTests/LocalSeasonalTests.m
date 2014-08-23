@@ -28,7 +28,16 @@
 
 - (void)testExample
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+   
+        NSDate *date = [NSDate date];
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+        
+        [dateFormatter setDateFormat:@"MMMM"];
+        
+        NSString *monthString = [dateFormatter stringFromDate:date];
+        
+        NSLog(@"This Month = %@", monthString);
+    XCTAssertEqualObjects(@"August", monthString);
 }
 
 @end

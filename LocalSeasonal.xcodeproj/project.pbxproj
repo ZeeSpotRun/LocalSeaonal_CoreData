@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A21C6A011987267000D06D36 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A21C6A001987266F00D06D36 /* AVFoundation.framework */; };
+		A229363C198C2E8100482777 /* peach3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A229363B198C2E8100482777 /* peach3.jpeg */; };
+		A2293640198C30F500482777 /* apple2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A229363F198C30F500482777 /* apple2.jpeg */; };
+		A2293642198C317C00482777 /* currants3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A2293641198C317C00482777 /* currants3.jpeg */; };
+		A2293644198C31D500482777 /* plum2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A2293643198C31D500482777 /* plum2.jpeg */; };
+		A2293646198C322B00482777 /* blueberry2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A2293645198C322B00482777 /* blueberry2.jpeg */; };
+		A229364F198C3E8800482777 /* RecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A229364D198C3E8800482777 /* RecipeViewController.m */; };
+		A2293650198C3E8800482777 /* RecipeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A229364E198C3E8800482777 /* RecipeViewController.xib */; };
+		A2293653198C416F00482777 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A2293652198C416F00482777 /* Reachability.m */; };
+		A2293657198C4A4F00482777 /* apricot3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2293656198C4A4F00482777 /* apricot3.jpg */; };
+		A22E48B5198D36F500E4AD27 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A22E48B4198D36F500E4AD27 /* CoreData.framework */; };
 		A2392F351985E7EB00A40D56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2392F341985E7EB00A40D56 /* Foundation.framework */; };
 		A2392F371985E7EB00A40D56 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2392F361985E7EB00A40D56 /* CoreGraphics.framework */; };
 		A2392F391985E7EB00A40D56 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2392F381985E7EB00A40D56 /* UIKit.framework */; };
@@ -19,6 +30,17 @@
 		A2392F501985E7EB00A40D56 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2392F381985E7EB00A40D56 /* UIKit.framework */; };
 		A2392F581985E7EB00A40D56 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A2392F561985E7EB00A40D56 /* InfoPlist.strings */; };
 		A2392F5A1985E7EB00A40D56 /* LocalSeasonalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2392F591985E7EB00A40D56 /* LocalSeasonalTests.m */; };
+		A2392F661985E82B00A40D56 /* homeLocalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2392F641985E82B00A40D56 /* homeLocalViewController.m */; };
+		A2392F671985E82B00A40D56 /* homeLocalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2392F651985E82B00A40D56 /* homeLocalViewController.xib */; };
+		A2392F6C1985FF4400A40D56 /* Green Leaves.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2392F6B1985FF4400A40D56 /* Green Leaves.jpg */; };
+		A27556C6199E82C500F6519D /* ProduceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A27556C4199E82C500F6519D /* ProduceViewController.m */; };
+		A27556C7199E82C500F6519D /* ProduceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A27556C5199E82C500F6519D /* ProduceViewController.xib */; };
+		A27556D3199EEF9000F6519D /* InSeasonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A27556D1199EEF9000F6519D /* InSeasonViewController.m */; };
+		A27556D4199EEF9000F6519D /* InSeasonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A27556D2199EEF9000F6519D /* InSeasonViewController.xib */; };
+		A2B5026419893F9500206192 /* DataInit.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B5026319893F9500206192 /* DataInit.m */; };
+		A2B50267198940A900206192 /* Produce.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B50266198940A900206192 /* Produce.m */; };
+		A2CA2ADE198D562F004C4AB4 /* grape1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2CA2ADD198D562F004C4AB4 /* grape1.jpg */; };
+		A2CA2AE1198D5DDD004C4AB4 /* LocalSeasonalFav.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2CA2ADF198D5DDD004C4AB4 /* LocalSeasonalFav.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +54,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A21C6A001987266F00D06D36 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A229363B198C2E8100482777 /* peach3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = peach3.jpeg; path = Images/peach3.jpeg; sourceTree = "<group>"; };
+		A229363F198C30F500482777 /* apple2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = apple2.jpeg; path = Images/apple2.jpeg; sourceTree = "<group>"; };
+		A2293641198C317C00482777 /* currants3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = currants3.jpeg; path = Images/currants3.jpeg; sourceTree = "<group>"; };
+		A2293643198C31D500482777 /* plum2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = plum2.jpeg; path = Images/plum2.jpeg; sourceTree = "<group>"; };
+		A2293645198C322B00482777 /* blueberry2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = blueberry2.jpeg; path = Images/blueberry2.jpeg; sourceTree = "<group>"; };
+		A229364C198C3E8800482777 /* RecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeViewController.h; sourceTree = "<group>"; };
+		A229364D198C3E8800482777 /* RecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeViewController.m; sourceTree = "<group>"; };
+		A229364E198C3E8800482777 /* RecipeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecipeViewController.xib; sourceTree = "<group>"; };
+		A2293651198C416F00482777 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = SOURCE_ROOT; };
+		A2293652198C416F00482777 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = SOURCE_ROOT; };
+		A2293656198C4A4F00482777 /* apricot3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = apricot3.jpg; path = Images/apricot3.jpg; sourceTree = "<group>"; };
+		A22E48B4198D36F500E4AD27 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A2392F311985E7EB00A40D56 /* LocalSeasonal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalSeasonal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2392F341985E7EB00A40D56 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A2392F361985E7EB00A40D56 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,6 +83,22 @@
 		A2392F551985E7EB00A40D56 /* LocalSeasonalTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LocalSeasonalTests-Info.plist"; sourceTree = "<group>"; };
 		A2392F571985E7EB00A40D56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A2392F591985E7EB00A40D56 /* LocalSeasonalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalSeasonalTests.m; sourceTree = "<group>"; };
+		A2392F631985E82B00A40D56 /* homeLocalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = homeLocalViewController.h; path = ../homeLocalViewController.h; sourceTree = "<group>"; };
+		A2392F641985E82B00A40D56 /* homeLocalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = homeLocalViewController.m; path = ../homeLocalViewController.m; sourceTree = "<group>"; };
+		A2392F651985E82B00A40D56 /* homeLocalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = homeLocalViewController.xib; path = ../homeLocalViewController.xib; sourceTree = "<group>"; };
+		A2392F6B1985FF4400A40D56 /* Green Leaves.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Green Leaves.jpg"; path = "Images/Green Leaves.jpg"; sourceTree = "<group>"; };
+		A27556C3199E82C500F6519D /* ProduceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProduceViewController.h; sourceTree = "<group>"; };
+		A27556C4199E82C500F6519D /* ProduceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProduceViewController.m; sourceTree = "<group>"; };
+		A27556C5199E82C500F6519D /* ProduceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProduceViewController.xib; sourceTree = "<group>"; };
+		A27556D0199EEF9000F6519D /* InSeasonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InSeasonViewController.h; sourceTree = "<group>"; };
+		A27556D1199EEF9000F6519D /* InSeasonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InSeasonViewController.m; sourceTree = "<group>"; };
+		A27556D2199EEF9000F6519D /* InSeasonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InSeasonViewController.xib; sourceTree = "<group>"; };
+		A2B5026219893F9500206192 /* DataInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataInit.h; sourceTree = "<group>"; };
+		A2B5026319893F9500206192 /* DataInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataInit.m; sourceTree = "<group>"; };
+		A2B50265198940A900206192 /* Produce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Produce.h; sourceTree = "<group>"; };
+		A2B50266198940A900206192 /* Produce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Produce.m; sourceTree = "<group>"; };
+		A2CA2ADD198D562F004C4AB4 /* grape1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = grape1.jpg; path = Images/grape1.jpg; sourceTree = "<group>"; };
+		A2CA2AE0198D5DDD004C4AB4 /* LocalSeasonalFav.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocalSeasonalFav.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +106,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A22E48B5198D36F500E4AD27 /* CoreData.framework in Frameworks */,
+				A21C6A011987267000D06D36 /* AVFoundation.framework in Frameworks */,
 				A2392F371985E7EB00A40D56 /* CoreGraphics.framework in Frameworks */,
 				A2392F391985E7EB00A40D56 /* UIKit.framework in Frameworks */,
 				A2392F351985E7EB00A40D56 /* Foundation.framework in Frameworks */,
@@ -77,6 +130,8 @@
 		A2392F281985E7EB00A40D56 = {
 			isa = PBXGroup;
 			children = (
+				A2CA2ADF198D5DDD004C4AB4 /* LocalSeasonalFav.xcdatamodeld */,
+				A2741F4C198E9EBF0000B4D1 /* Images */,
 				A2392F3A1985E7EB00A40D56 /* LocalSeasonal */,
 				A2392F531985E7EB00A40D56 /* LocalSeasonalTests */,
 				A2392F331985E7EB00A40D56 /* Frameworks */,
@@ -96,6 +151,8 @@
 		A2392F331985E7EB00A40D56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A22E48B4198D36F500E4AD27 /* CoreData.framework */,
+				A21C6A001987266F00D06D36 /* AVFoundation.framework */,
 				A2392F341985E7EB00A40D56 /* Foundation.framework */,
 				A2392F361985E7EB00A40D56 /* CoreGraphics.framework */,
 				A2392F381985E7EB00A40D56 /* UIKit.framework */,
@@ -107,6 +164,8 @@
 		A2392F3A1985E7EB00A40D56 /* LocalSeasonal */ = {
 			isa = PBXGroup;
 			children = (
+				A2741F4E198E9F550000B4D1 /* Data Classes */,
+				A2741F4D198E9EDB0000B4D1 /* ViewControllers */,
 				A2392F431985E7EB00A40D56 /* AppDelegate.h */,
 				A2392F441985E7EB00A40D56 /* AppDelegate.m */,
 				A2392F461985E7EB00A40D56 /* Images.xcassets */,
@@ -142,6 +201,53 @@
 				A2392F561985E7EB00A40D56 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A2741F4C198E9EBF0000B4D1 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A229363F198C30F500482777 /* apple2.jpeg */,
+				A2293656198C4A4F00482777 /* apricot3.jpg */,
+				A2293645198C322B00482777 /* blueberry2.jpeg */,
+				A2293641198C317C00482777 /* currants3.jpeg */,
+				A2CA2ADD198D562F004C4AB4 /* grape1.jpg */,
+				A229363B198C2E8100482777 /* peach3.jpeg */,
+				A2293643198C31D500482777 /* plum2.jpeg */,
+				A2392F6B1985FF4400A40D56 /* Green Leaves.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		A2741F4D198E9EDB0000B4D1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A2392F631985E82B00A40D56 /* homeLocalViewController.h */,
+				A2392F641985E82B00A40D56 /* homeLocalViewController.m */,
+				A2392F651985E82B00A40D56 /* homeLocalViewController.xib */,
+				A27556D0199EEF9000F6519D /* InSeasonViewController.h */,
+				A27556D1199EEF9000F6519D /* InSeasonViewController.m */,
+				A27556D2199EEF9000F6519D /* InSeasonViewController.xib */,
+				A27556C3199E82C500F6519D /* ProduceViewController.h */,
+				A27556C4199E82C500F6519D /* ProduceViewController.m */,
+				A27556C5199E82C500F6519D /* ProduceViewController.xib */,
+				A229364C198C3E8800482777 /* RecipeViewController.h */,
+				A229364D198C3E8800482777 /* RecipeViewController.m */,
+				A229364E198C3E8800482777 /* RecipeViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A2741F4E198E9F550000B4D1 /* Data Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A2B5026219893F9500206192 /* DataInit.h */,
+				A2B5026319893F9500206192 /* DataInit.m */,
+				A2B50265198940A900206192 /* Produce.h */,
+				A2B50266198940A900206192 /* Produce.m */,
+				A2293651198C416F00482777 /* Reachability.h */,
+				A2293652198C416F00482777 /* Reachability.m */,
+			);
+			name = "Data Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,7 +325,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2392F6C1985FF4400A40D56 /* Green Leaves.jpg in Resources */,
+				A27556C7199E82C500F6519D /* ProduceViewController.xib in Resources */,
+				A2293642198C317C00482777 /* currants3.jpeg in Resources */,
+				A2293640198C30F500482777 /* apple2.jpeg in Resources */,
+				A2CA2ADE198D562F004C4AB4 /* grape1.jpg in Resources */,
+				A229363C198C2E8100482777 /* peach3.jpeg in Resources */,
+				A2293650198C3E8800482777 /* RecipeViewController.xib in Resources */,
+				A2293644198C31D500482777 /* plum2.jpeg in Resources */,
+				A2392F671985E82B00A40D56 /* homeLocalViewController.xib in Resources */,
+				A2293657198C4A4F00482777 /* apricot3.jpg in Resources */,
 				A2392F3F1985E7EB00A40D56 /* InfoPlist.strings in Resources */,
+				A2293646198C322B00482777 /* blueberry2.jpeg in Resources */,
+				A27556D4199EEF9000F6519D /* InSeasonViewController.xib in Resources */,
 				A2392F471985E7EB00A40D56 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,8 +357,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2CA2AE1198D5DDD004C4AB4 /* LocalSeasonalFav.xcdatamodeld in Sources */,
+				A2392F661985E82B00A40D56 /* homeLocalViewController.m in Sources */,
+				A2B5026419893F9500206192 /* DataInit.m in Sources */,
+				A2293653198C416F00482777 /* Reachability.m in Sources */,
 				A2392F451985E7EB00A40D56 /* AppDelegate.m in Sources */,
+				A229364F198C3E8800482777 /* RecipeViewController.m in Sources */,
 				A2392F411985E7EB00A40D56 /* main.m in Sources */,
+				A2B50267198940A900206192 /* Produce.m in Sources */,
+				A27556D3199EEF9000F6519D /* InSeasonViewController.m in Sources */,
+				A27556C6199E82C500F6519D /* ProduceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +563,7 @@
 				A2392F5F1985E7EB00A40D56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A2392F601985E7EB00A40D56 /* Build configuration list for PBXNativeTarget "LocalSeasonalTests" */ = {
 			isa = XCConfigurationList;
@@ -445,8 +572,22 @@
 				A2392F621985E7EB00A40D56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A2CA2ADF198D5DDD004C4AB4 /* LocalSeasonalFav.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A2CA2AE0198D5DDD004C4AB4 /* LocalSeasonalFav.xcdatamodel */,
+			);
+			currentVersion = A2CA2AE0198D5DDD004C4AB4 /* LocalSeasonalFav.xcdatamodel */;
+			path = LocalSeasonalFav.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A2392F291985E7EB00A40D56 /* Project object */;
 }

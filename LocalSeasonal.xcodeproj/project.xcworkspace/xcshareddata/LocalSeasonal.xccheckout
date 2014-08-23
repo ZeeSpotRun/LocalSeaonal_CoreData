@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D334F3C6-2FB2-4D6B-A7F4-D4CF20526325</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LocalSeasonal</string>
+	<key>IDESourceControlProjectPath</key>
+	<string>LocalSeasonal.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EFD4955E-C6F0-4B30-A566-F6C83AFD25A6</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ZeeSpotRun/LocalSeasonal</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EFD4955E-C6F0-4B30-A566-F6C83AFD25A6</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EFD4955E-C6F0-4B30-A566-F6C83AFD25A6</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LocalSeasonal_FavEmail_CoreData</string>
+		</dict>
+	</array>
+</dict>
+</plist>
