@@ -59,12 +59,12 @@ if (self.fullProduceArray == nil)
         NSLog(@"FullProduceArray already populated");
     }
     
-    NSMutableArray *returnArray = [self findCurrentProduce:month];
+    NSMutableArray *returnArray = [self findCurrentProduce:month withContext:context];
     
     return returnArray;
 }
 
-#pragma Mark Initialize CoreData Context methods
+#pragma Mark Initialize CoreData Context
 
 -(NSManagedObjectModel *) managedObjectModel {
     if (_model !=nil) {
@@ -109,16 +109,19 @@ if (self.fullProduceArray == nil)
     return _context;
 }
 
-#pragma mark initialize CoreData database - Methods
+/* populate CoreData database - Methods */
 
 -(void)initCoreData:(NSManagedObjectContext*)context{
     
-    self.fullProduceArray = [[NSMutableArray alloc]initWithArray:[self inSeasonTableArrayInit]];
+    Produce *produceMaker = [[Produce alloc]init];
+    self.fullProduceArray = [[NSMutableArray alloc]initWithArray:[produceMaker produceArrayInit]];
+    
     for (int i = 0; i<[self.fullProduceArray count];i++) {
+        
         Produce *produce = [[Produce alloc]init];
         produce = self.fullProduceArray[i];
         NSManagedObject *newProduce = [NSEntityDescription insertNewObjectForEntityForName:@"Produce"
-                                                   inManagedObjectContext:context];
+                                                                    inManagedObjectContext:context];
         
         [newProduce setValue:produce.name forKey:@"name"];
         [newProduce setValue:produce.image forKey:@"image"];
@@ -130,6 +133,8 @@ if (self.fullProduceArray == nil)
 
     }
 }
+
+ /* Manage Favorites - Methods*/
 
 -(void)editCoreDataFavorite:(Produce *)produceFav withContext:(NSManagedObjectContext*)context
 {
@@ -159,6 +164,7 @@ if (self.fullProduceArray == nil)
     }
     
 }
+
 
 -(NSMutableArray *)findCoreDataFavorite:(NSManagedObjectContext*)context inMonth:(NSString *)month
 {
@@ -198,6 +204,63 @@ if (self.fullProduceArray == nil)
     return favArray;
 }
 
+
+/* Populate array of current Produce */
+
+-(NSMutableArray *)findCurrentProduce:(NSString *)month withContext:(NSManagedObjectContext *)context
+{
+    
+    NSEntityDescription *produceDesc = [NSEntityDescription entityForName:@"Produce" inManagedObjectContext:context];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc]init];
+    [request setEntity:produceDesc];
+    
+    NSPredicate *produceCriteria = [NSPredicate predicateWithFormat:@"(season CONTAINS %@)", month];
+    [request setPredicate:produceCriteria];
+    
+    NSError *err;
+    NSArray *produceMatches = [context executeFetchRequest:request error:&err];
+    
+    NSManagedObject *currentCoreDataProduce;
+    NSMutableArray *currentArray = [[NSMutableArray alloc]init];
+    
+    if ([produceMatches count] == 0) {
+        
+        NSLog(@"Produce Not Found");
+        [self initCoreData:context];
+        
+    } else {
+        
+        for (int i = 0; i < [produceMatches count]; i++)
+        {
+            currentCoreDataProduce = produceMatches[i];
+            Produce *currentProduce = [[Produce alloc]init];
+            currentProduce.name = [currentCoreDataProduce valueForKey:@"name"];
+            currentProduce.image = [currentCoreDataProduce valueForKey:@"image"];
+            currentProduce.recipeURL = [currentCoreDataProduce valueForKey:@"recipeURL"];
+            currentProduce.inSeason = [currentCoreDataProduce valueForKey:@"season"];
+            currentProduce.favorite = [currentCoreDataProduce valueForKey:@"favorite"];
+            
+            [currentArray addObject:currentProduce];
+            
+        }
+    }
+    
+    return currentArray;
+}
+
+/* Create Array of months from "inSeason" Produce property*/
+
+-(NSArray *)createMonthArray:(NSString *)fromString
+{
+    
+    NSArray *arrayComponents = [fromString componentsSeparatedByString:@","];
+    return arrayComponents;
+    
+}
+
+ /* In case needed to re-boot Core Data */
+
 -(void)deleteAllProduce:(NSManagedObjectContext *)context {
     NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"Produce" inManagedObjectContext:context];
     NSFetchRequest *produceRequest = [[NSFetchRequest alloc]init];
@@ -217,163 +280,5 @@ if (self.fullProduceArray == nil)
     
 }
 
-
--(NSMutableArray *)inSeasonTableArrayInit
-{
-    
-    
-    Produce *apricot = [[Produce alloc]init];
-    apricot.name = @"Apricots";
-    apricot.image = @"apricot3.jpg";
-    apricot.recipeURL  = @"http://smittenkitchen.com/blog/category/fruit/apricots/";
-    apricot.inSeason = @"July,August,September";
-    apricot.favorite = @"No";
-    
-    Produce *plum = [[Produce alloc]init];
-    plum.name = @"Plums";
-    plum.image = @"plum2.jpeg";
-    plum.inSeason = @"July,August";
-    plum.recipeURL = @"http://smittenkitchen.com/blog/2013/10/purple-plum-torte/";
-    plum.favorite = @"No";
-    
-    Produce *apple = [[Produce alloc]init];
-    apple.name = @"Apples";
-    apple.image = @"apple2.jpeg";
-    apple.inSeason = @"July,August,September,October";
-    apple.recipeURL = @"http://smittenkitchen.com/apples/";
-    apple.favorite = @"No";
-    
-    Produce *blueberry = [[Produce alloc]init];
-    blueberry.name = @"Blueberries";
-    blueberry.image = @"blueberry2.jpeg";
-    blueberry.inSeason = @"July,August,September";
-    blueberry.recipeURL =@"http://smittenkitchen.com/blog/category/fruit/blueberries/";
-    blueberry.favorite = @"No";
-    
-    Produce *currant = [[Produce alloc]init];
-    currant.name = @"Currants";
-    currant.image = @"currants3.jpeg";
-    currant.inSeason = @"August";
-    currant.recipeURL =@"http://www.davidlebovitz.com/2011/06/red-currant-jam-recipe/";
-    currant.favorite = @"No";
-    
-    Produce *peach = [[Produce alloc]init];
-    peach.name = @"Peaches";
-    peach.image = @"peach3.jpeg";
-    peach.inSeason = @"July,August,September";
-    peach.recipeURL = @"http://www.davidlebovitz.com/2012/08/peach-shortcake-recipe/";
-    peach.favorite = @"No";
-    
-    Produce *grape = [[Produce alloc]init];
-    grape.name = @"Grapes";
-    grape.image = @"grape1.jpg";
-    grape.inSeason = @"September,October";
-    grape.recipeURL = @"http://www.davidlebovitz.com/2008/09/fresh-grape-sherbet/";
-    grape.favorite = @"No";
-
-    NSMutableArray *initArray = [[NSMutableArray alloc]initWithObjects:apple, apricot, blueberry, currant, grape, peach, plum, nil];
-    
-    
-    return initArray;
-}
-
-#pragma mark produce for current season - Methods
-
--(NSMutableArray *)findCurrentProduce:(NSString *)month
-{
-    /* Intialize season's array of produce from "fullProduceArray" with current month */
-    
-    NSMutableArray *thisSeasonsArray = [[NSMutableArray alloc]init];
-    
-    for (int i=0; i<=[self.fullProduceArray count]-1; i++)
-    {
-        Produce *thisSeasonProduce = [[Produce alloc]init];
-        thisSeasonProduce = self.fullProduceArray[i];
-        
-        /* Get array of produce's "in season" months to compare to current month */
-        
-        NSMutableArray *monthList = [[NSMutableArray alloc]initWithArray:[self createArray:thisSeasonProduce.inSeason]];
-        
-        for (int j=0; j<[monthList count]; j++)
-        {
-            if ([monthList[j] isEqualToString:month])
-            {
-                [thisSeasonsArray addObject:thisSeasonProduce];
-            }
-        }
-        
-    }
-    
-    return thisSeasonsArray;
-}
-
--(NSString *)findCurrentMonth
-{
-    NSDate *date = [NSDate date];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
-    
-    [dateFormatter setDateFormat:@"MMMM"];
-    
-    NSString *monthString = [dateFormatter stringFromDate:date];
-    
-    return monthString;
-}
-
--(NSString *)findNextMonth:(NSString *)fromDate
-{
-    NSDate *date = [self dateFromString:fromDate];
-    
-    NSCalendar *gregorian = [[NSCalendar alloc]initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents *components = [[NSDateComponents alloc]init];
-    [components setMonth:1];
-    
-    NSDate *nextMonth = [gregorian dateByAddingComponents:components toDate:date options:0];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
-    
-    [dateFormatter setDateFormat:@"MMMM"];
-    
-    NSString *monthString = [dateFormatter stringFromDate:nextMonth];
-    
-    return monthString;
-}
-
--(NSString *)findPreviousMonth:(NSString *)fromDate
-{
-    NSDate *date = [self dateFromString:fromDate];
-    NSCalendar *gregorian = [[NSCalendar alloc]initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents *components = [[NSDateComponents alloc]init];
-    [components setMonth:-1];
-    
-    NSDate *nextMonth = [gregorian dateByAddingComponents:components toDate:date options:0];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
-    
-    [dateFormatter setDateFormat:@"MMMM"];
-    
-    NSString *monthString = [dateFormatter stringFromDate:nextMonth];
-    
-    return monthString;
-}
-
--(NSDate *)dateFromString:(NSString *)dateString
-{
-    
-    // convert it into NSDate object
-    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-    [formatter setDateFormat:@"MMMM"];
-    NSDate *theDate = [formatter dateFromString:dateString];
-    
-    NSLog(@"Your Date Object is %@", theDate);
-    
-    return theDate;
-    
-}
-
--(NSArray *)createArray:(NSString *)fromString
-{
-    
-    NSArray *arrayComponents = [fromString componentsSeparatedByString:@","];
-    return arrayComponents;
-    
-}
 
 @end

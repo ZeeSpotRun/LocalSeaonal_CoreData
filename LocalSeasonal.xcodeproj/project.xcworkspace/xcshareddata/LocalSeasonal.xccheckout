@@ -5,29 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>D334F3C6-2FB2-4D6B-A7F4-D4CF20526325</string>
+	<string>507223C1-BB42-4EC2-9EF2-3148163FF6F0</string>
 	<key>IDESourceControlProjectName</key>
 	<string>LocalSeasonal</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>33E9E232-0E45-42DC-A62D-E8B89167134A</key>
+		<string>https://github.com/ZeeSpotRun/LocalSeaonal_CoreData.git</string>
+	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>LocalSeasonal.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>EFD4955E-C6F0-4B30-A566-F6C83AFD25A6</key>
+		<key>33E9E232-0E45-42DC-A62D-E8B89167134A</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/ZeeSpotRun/LocalSeasonal</string>
+	<string>https://github.com/ZeeSpotRun/LocalSeaonal_CoreData.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>EFD4955E-C6F0-4B30-A566-F6C83AFD25A6</string>
+	<string>33E9E232-0E45-42DC-A62D-E8B89167134A</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>EFD4955E-C6F0-4B30-A566-F6C83AFD25A6</string>
+			<string>33E9E232-0E45-42DC-A62D-E8B89167134A</string>
 			<key>IDESourceControlWCCName</key>
 			<string>LocalSeasonal_FavEmail_CoreData</string>
 		</dict>

@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "DataInit.h"
 #import "ProduceViewController.h"
+#import "Month.h"
 
 @interface InSeasonViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
@@ -19,6 +20,8 @@
 @property (strong, nonatomic) NSMutableArray *tableArray;
 @property (strong, nonatomic) NSMutableArray *favoriteArray;
 @property (strong, nonatomic) DataInit *dataInit;
+
+@property (strong, nonatomic) Month *monthSearch;
 @property (strong, nonatomic) NSManagedObjectContext *context;
 
 @property (strong, nonatomic) NSString *currentMonth;

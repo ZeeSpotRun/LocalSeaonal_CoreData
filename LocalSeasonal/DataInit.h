@@ -26,19 +26,12 @@
 #pragma mark CoreData Methods
 -(NSManagedObjectContext*)managedObjectContextInit;
 -(NSMutableArray *)importCoreDataWithContext:(NSManagedObjectContext*)context forMonth:(NSString*)month;
--(void)initCoreData:(NSManagedObjectContext*)context;
+-(NSMutableArray *)findCurrentProduce:(NSString *)month withContext:(NSManagedObjectContext *)context;
+
+ /* "Favorite" Methods */
 -(void)editCoreDataFavorite:(Produce *)produceFav withContext:(NSManagedObjectContext*)context;
 -(NSMutableArray *)findCoreDataFavorite:(NSManagedObjectContext*)context inMonth:(NSString *)month;
--(void)deleteAllProduce:(NSManagedObjectContext *)context;
 
-#pragma mark Produce Season Methods
--(NSMutableArray *)inSeasonTableArrayInit;
--(NSMutableArray *)findCurrentProduce:(NSString *)month;
--(NSString *)findNextMonth:(NSString *)fromDate;
--(NSString *)findPreviousMonth:(NSString *)fromDate;
--(NSString *)findCurrentMonth;
-
-#pragma mark string to array method
--(NSArray *)createArray:(NSString *)fromString;
+-(NSArray *)createMonthArray:(NSString *)fromString;
 
 @end

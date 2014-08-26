@@ -6,9 +6,6 @@
 //  Copyright (c) 2014 Zoe Malcolm. All rights reserved.
 //
 
-//(2) Add Email app
-//(3) Make everything self.blabla
-
 #import "InSeasonViewController.h"
 
 @interface InSeasonViewController ()
@@ -31,9 +28,10 @@
     self.view.backgroundColor = BACKGROUND_COLOR;
     
     self.dataInit = [[DataInit alloc]init];
+    self.monthSearch = [[Month alloc]init];
     
     if (self.currentMonth == nil){
-        self.currentMonth = [self.dataInit findCurrentMonth];
+        self.currentMonth = [self.monthSearch findCurrentMonth];
     }
     
     [self initNavBar];
@@ -72,7 +70,7 @@
     
     /* Set "Previous Month" Button */
     
-    self.previousMonthBtn = [[UIBarButtonItem alloc]initWithTitle:[self.dataInit findPreviousMonth:self.currentMonth]
+    self.previousMonthBtn = [[UIBarButtonItem alloc]initWithTitle:[self.monthSearch findPreviousMonth:self.currentMonth]
                                                             style:UIBarButtonItemStylePlain
                                                            target:self
                                                            action:@selector(loadPreviousMonth)];
@@ -80,7 +78,7 @@
     
     /* Set "Next month" Button */
     
-    self.nextMonthBtn = [[UIBarButtonItem alloc]initWithTitle:[self.dataInit findNextMonth:self.currentMonth]
+    self.nextMonthBtn = [[UIBarButtonItem alloc]initWithTitle:[self.monthSearch findNextMonth:self.currentMonth]
                                                         style:UIBarButtonItemStylePlain
                                                        target:self
                                                        action:@selector(loadNextMonth)];
@@ -161,15 +159,17 @@
 
 -(void)loadPreviousMonth
 {
-    NSString *previousMonth = [self.dataInit findPreviousMonth:self.currentMonth];
+    
+    NSString *previousMonth = [self.monthSearch findPreviousMonth:self.currentMonth];
     self.title = [NSString stringWithFormat:@"%@", previousMonth];
-    self.navigationItem.leftBarButtonItem.title = [self.dataInit findPreviousMonth:previousMonth];
-    self.navigationItem.rightBarButtonItem.title = [self.dataInit findNextMonth:previousMonth];
+    self.navigationItem.leftBarButtonItem.title = [self.monthSearch findPreviousMonth:previousMonth];
+    self.navigationItem.rightBarButtonItem.title = [self.monthSearch findNextMonth:previousMonth];
     self.currentMonth = previousMonth;
     
     if ([self.showFavorite.titleLabel.text isEqual: @"Show Favorites"] ) {
         
-        self.tableArray = [[NSMutableArray alloc]initWithArray:[self.dataInit findCurrentProduce:self.currentMonth]];
+        self.tableArray = [[NSMutableArray alloc]init];
+        self.tableArray = [self.dataInit importCoreDataWithContext:self.context forMonth:self.currentMonth];
         [self.inSeasonTableView reloadData];
        
     } else {
@@ -181,15 +181,17 @@
 
 -(void)loadNextMonth
 {
-    NSString *nextMonth = [self.dataInit findNextMonth:self.currentMonth];
+
+    NSString *nextMonth = [self.monthSearch findNextMonth:self.currentMonth];
     self.title = [NSString stringWithFormat:@"%@", nextMonth];
-    self.navigationItem.leftBarButtonItem.title = [self.dataInit findPreviousMonth:nextMonth];
-    self.navigationItem.rightBarButtonItem.title = [self.dataInit findNextMonth:nextMonth];
+    self.navigationItem.leftBarButtonItem.title = [self.monthSearch findPreviousMonth:nextMonth];
+    self.navigationItem.rightBarButtonItem.title = [self.monthSearch findNextMonth:nextMonth];
     self.currentMonth = nextMonth;
     
     if ([self.showFavorite.titleLabel.text  isEqual: @"Show Favorites"] ) {
         
-        self.tableArray = [[NSMutableArray alloc]initWithArray:[self.dataInit findCurrentProduce:self.currentMonth]];
+        self.tableArray = [[NSMutableArray alloc]init];
+        self.tableArray = [self.dataInit importCoreDataWithContext:self.context forMonth:self.currentMonth];
         [self.inSeasonTableView reloadData];
         
     } else {

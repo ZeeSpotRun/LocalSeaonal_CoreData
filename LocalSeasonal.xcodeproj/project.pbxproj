@@ -37,6 +37,7 @@
 		A27556C7199E82C500F6519D /* ProduceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A27556C5199E82C500F6519D /* ProduceViewController.xib */; };
 		A27556D3199EEF9000F6519D /* InSeasonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A27556D1199EEF9000F6519D /* InSeasonViewController.m */; };
 		A27556D4199EEF9000F6519D /* InSeasonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A27556D2199EEF9000F6519D /* InSeasonViewController.xib */; };
+		A2B36DE419ACF14A005041F3 /* Month.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B36DE319ACF14A005041F3 /* Month.m */; };
 		A2B5026419893F9500206192 /* DataInit.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B5026319893F9500206192 /* DataInit.m */; };
 		A2B50267198940A900206192 /* Produce.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B50266198940A900206192 /* Produce.m */; };
 		A2CA2ADE198D562F004C4AB4 /* grape1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2CA2ADD198D562F004C4AB4 /* grape1.jpg */; };
@@ -93,6 +94,8 @@
 		A27556D0199EEF9000F6519D /* InSeasonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InSeasonViewController.h; sourceTree = "<group>"; };
 		A27556D1199EEF9000F6519D /* InSeasonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InSeasonViewController.m; sourceTree = "<group>"; };
 		A27556D2199EEF9000F6519D /* InSeasonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InSeasonViewController.xib; sourceTree = "<group>"; };
+		A2B36DE219ACF14A005041F3 /* Month.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Month.h; sourceTree = "<group>"; };
+		A2B36DE319ACF14A005041F3 /* Month.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Month.m; sourceTree = "<group>"; };
 		A2B5026219893F9500206192 /* DataInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataInit.h; sourceTree = "<group>"; };
 		A2B5026319893F9500206192 /* DataInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataInit.m; sourceTree = "<group>"; };
 		A2B50265198940A900206192 /* Produce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Produce.h; sourceTree = "<group>"; };
@@ -246,6 +249,8 @@
 				A2B50266198940A900206192 /* Produce.m */,
 				A2293651198C416F00482777 /* Reachability.h */,
 				A2293652198C416F00482777 /* Reachability.m */,
+				A2B36DE219ACF14A005041F3 /* Month.h */,
+				A2B36DE319ACF14A005041F3 /* Month.m */,
 			);
 			name = "Data Classes";
 			sourceTree = "<group>";
@@ -362,6 +367,7 @@
 				A2B5026419893F9500206192 /* DataInit.m in Sources */,
 				A2293653198C416F00482777 /* Reachability.m in Sources */,
 				A2392F451985E7EB00A40D56 /* AppDelegate.m in Sources */,
+				A2B36DE419ACF14A005041F3 /* Month.m in Sources */,
 				A229364F198C3E8800482777 /* RecipeViewController.m in Sources */,
 				A2392F411985E7EB00A40D56 /* main.m in Sources */,
 				A2B50267198940A900206192 /* Produce.m in Sources */,

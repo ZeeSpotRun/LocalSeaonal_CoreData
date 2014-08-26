@@ -58,7 +58,7 @@
     
     
     self.recipeArray = [[NSMutableArray alloc]initWithObjects:self.producePage.recipeURL, nil];
-    self.seasonArray = [[NSMutableArray alloc]initWithArray:[dataInitialize createArray:self.producePage.inSeason]];
+    self.seasonArray = [[NSMutableArray alloc]initWithArray:[dataInitialize createMonthArray:self.producePage.inSeason]];
     
     [self createFavButton];
     
@@ -68,10 +68,8 @@
 -(void)createFavButton
 {
     self.favButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-//    self.favButton.center = CGPointMake(70, 215);
     self.favButton.frame = CGRectMake(0, 215, self.view.bounds.size.width, 30);
 
-    self.favButton.tintColor = FAV_COLOR;
     self.favButton.titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:16];
     [self.favButton addTarget:self action:@selector(toggleFavoritesData) forControlEvents:UIControlEventTouchUpInside];
     
@@ -79,8 +77,10 @@
     
     if ([self.producePage.favorite isEqualToString:@"No"]) {
         [self.favButton setTitle:@"Add To Favorites" forState:UIControlStateNormal];
+        [self.favButton setTintColor:FAV_COLOR];
     } else {
         [self.favButton setTitle:@"Remove from Favorites" forState:UIControlStateNormal];
+        [self.favButton setTintColor:[UIColor blueColor]];
     }
     
     self.favButton.titleLabel.textAlignment = NSTextAlignmentCenter;

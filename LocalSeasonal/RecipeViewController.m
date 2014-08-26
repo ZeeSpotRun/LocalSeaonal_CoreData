@@ -15,7 +15,9 @@
 @implementation RecipeViewController
 
 - (void)viewWillAppear:(BOOL)animated{
+    
     [super viewWillAppear:animated];
+    
     self.webView.delegate = self;
     [self configureWebView];
     

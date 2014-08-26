@@ -16,4 +16,6 @@
 @property (strong, nonatomic) NSString *recipeURL;
 @property (strong, nonatomic) NSString *favorite;
 
+-(NSMutableArray *)produceArrayInit;
+
 @end
