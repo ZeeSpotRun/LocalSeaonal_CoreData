@@ -261,7 +261,9 @@ if (self.fullProduceArray == nil)
 
  /* In case needed to re-boot Core Data */
 
--(void)deleteAllProduce:(NSManagedObjectContext *)context {
+-(void)deleteAllProduce:(NSManagedObjectContext *)context
+{
+    
     NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"Produce" inManagedObjectContext:context];
     NSFetchRequest *produceRequest = [[NSFetchRequest alloc]init];
     [produceRequest setEntity:entityDesc];

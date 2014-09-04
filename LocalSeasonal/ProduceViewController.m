@@ -59,6 +59,7 @@
     
     self.recipeArray = [[NSMutableArray alloc]initWithObjects:self.producePage.recipeURL, nil];
     self.seasonArray = [[NSMutableArray alloc]initWithArray:[dataInitialize createMonthArray:self.producePage.inSeason]];
+    self.farmerArray = [[NSMutableArray alloc]initWithArray:@[@"Farmer's Markets"]];
     
     [self createFavButton];
     
@@ -93,24 +94,27 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    if (section == 0) {
-        
-        return [self.seasonArray count];
-        
-    } else if (section == 1) {
-        
-        return [self.recipeArray count];
-        
-    } else {
-        
-        return 1;
+    switch (section)
+    {
+        case 0:
+            return [self.seasonArray count];
+            break;
+        case 1:
+            return [self.recipeArray count];
+            break;
+        case 2:
+            return [self.farmerArray count];
+            break;
+        default:
+            return 1;
+            break;
     }
-
+    
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -145,15 +149,22 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
+    
     if (!cell){
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
     }
     
     if (indexPath.section == 0) {
+        
         cell.textLabel.text = [NSString stringWithFormat:@"%@", self.seasonArray[indexPath.row]];
+        
     } else if (indexPath.section == 1) {
+        
         cell.textLabel.text =[NSString stringWithFormat:@"Recipes for %@", self.title];
+    } else {
+        cell.textLabel.text = self.farmerArray[indexPath.row];
     }
     
     cell.textLabel.textColor = [UIColor whiteColor];
@@ -178,6 +189,9 @@
         recipeVC.title = @"Recipes";
         
         [self.navigationController pushViewController:recipeVC animated:YES];
+        
+    } else if (indexPath.section == 2)
+    {
         
     }
 }

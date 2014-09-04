@@ -24,6 +24,7 @@
 
 @property (strong, nonatomic) NSMutableArray *recipeArray;
 @property (strong, nonatomic) NSMutableArray *seasonArray;
+@property (strong, nonatomic) NSMutableArray *farmerArray;
 
 
 -(void)toggleFavoritesData;

@@ -6,6 +6,12 @@
 //  Copyright (c) 2014 Zoe Malcolm. All rights reserved.
 //
 
+                                                /* TO DO */
+
+// ADD NSSortDescriptors
+// ADD CoreLocation
+// Load UITableView cells via cache
+
 #import "InSeasonViewController.h"
 
 @interface InSeasonViewController ()
@@ -213,6 +219,7 @@
     }
     
     else
+        
         /* Reload Table Array with full produce list */
         
     {

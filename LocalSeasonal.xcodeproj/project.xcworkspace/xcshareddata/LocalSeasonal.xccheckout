@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>507223C1-BB42-4EC2-9EF2-3148163FF6F0</string>
+	<string>20EB2BA7-8A3C-4775-85B7-C7E226F93789</string>
 	<key>IDESourceControlProjectName</key>
 	<string>LocalSeasonal</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -21,7 +21,7 @@
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/ZeeSpotRun/LocalSeaonal_CoreData.git</string>
+	<string>https://github.com/ZeeSpotRun/LocalSeasonal</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
